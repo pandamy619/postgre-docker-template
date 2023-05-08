@@ -1,0 +1,6 @@
+# postgres dirs
+pgadmin
+pgdata
+
+# postgres exporter dirs
+queries.yaml
