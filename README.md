@@ -1,4 +1,4 @@
-# postgre-docker-template
+# Useful postgreSQL docker template
 
 ## pgAdmin 
 
