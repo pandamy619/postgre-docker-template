@@ -5,6 +5,13 @@ services:
     container_name: dozzle
     image: amir20/dozzle:latest
     restart: always
+    environment:
+      # DOZZLE_LEVEL: debug
+      DOZZLE_USERNAME_FILE: /run/secrets/dozzle_user
+      DOZZLE_PASSWORD_FILE: /run/secrets/dozzle_password
+    secrets:
+      - dozzle_user
+      - dozzle_password
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
@@ -86,6 +93,11 @@ services:
     networks:
       - postgres
 
+secrets:
+  dozzle_user:
+    file: ./secrets/dozzle_user.txt
+  dozzle_password:
+    file: ./secrets/dozzle_password.txt
 
 networks:
   postgres:
