@@ -1,9 +1,14 @@
 # Useful postgreSQL docker template
 
-## pgAdmin 
+## Useful pages
+* ### [pgAdmin Page](http://localhost:5050/browser/).
+* ### [Postgres exporter Page](http://localhost:9187/metrics).
+* ### [Dozzle Page](http://localhost:8080)
 
-[pgAdmin Pages](http://localhost:5050/browser/).
 
-## Postgres exporter
+## Secrets settings
 
-[postgres_exporter Pages](http://localhost:9187/metrics).
+
+**Only for local development!** You should specify `secrets` for services in the secret folder.
+**Please note that the secrets are stored as files.**
+
