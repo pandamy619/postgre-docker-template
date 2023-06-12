@@ -1,7 +1,6 @@
 # postgres dirs
 pgadmin
 pgdata
-2. Init Database
 
 # postgres exporter dirs
 queries.yaml
