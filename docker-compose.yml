@@ -27,18 +27,6 @@ services:
       - "pg_stat_statements.max=10000"
       - "-c"
       - "pg_stat_statements.track=all"
-      - "-c"
-      - "shared_buffers=3GB"
-      - "-c"
-      - "effective_cache_size=128MB"
-      - "-c"
-      - "maintenance_work_mem=2GB"
-      - "-c"
-      - "checkpoint_completion_target=0.9"
-      - "-c"
-      - "max_connections=1000"
-      - "-c"
-      - "max_wal_size=1GB"
     restart: always
     environment:
       POSTGRES_DB: "postgres"
