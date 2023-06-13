@@ -1,4 +1,3 @@
-
 version: "3.9"
 services:
   dozzle:
@@ -6,7 +5,7 @@ services:
     image: amir20/dozzle:latest
     restart: always
     environment:
-      # DOZZLE_LEVEL: debug
+      DOZZLE_LEVEL: debug
       DOZZLE_USERNAME_FILE: /run/secrets/dozzle_user
       DOZZLE_PASSWORD_FILE: /run/secrets/dozzle_password
     secrets:
