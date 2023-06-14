@@ -11,7 +11,7 @@ with:
 registry: ghcr.io
 username: ${{ github.actor }}
 password: ${{ secrets.GITHUB_TOKEN }}
-- name: Build the postgresql template
+- name: Build postgre-docker-template
 run: |
        docker build . --tag ghcr.io/pandamy619/postgre-docker-template:latest
        docker run ghcr.io/pandamy619/postgre-docker-template:latest
