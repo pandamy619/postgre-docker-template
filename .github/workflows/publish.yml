@@ -1,18 +1,18 @@
 name: publish
 on: [push]
 jobs:
-publish-hello-docker-image:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v2
-- name: pandamy619
-uses: docker/login-action@v1
-with:
-registry: ghcr.io
-username: ${{ github.actor }}
-password: ${{ secrets.GITHUB_TOKEN }}
-- name: Build postgre-docker-template
-run: |
-       docker build . --tag ghcr.io/pandamy619/postgre-docker-template:latest
-       docker run ghcr.io/pandamy619/postgre-docker-template:latest
-       docker push ghcr.io/pandamy619/postgre-docker-template:latest
+  publish-hello-docker-image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: pandamy619
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build postgre-docker-template
+      run: |
+         docker build . --tag ghcr.io/pandamy619/postgre-docker-template:latest
+         docker run ghcr.io/pandamy619/postgre-docker-template:latest
+         docker push ghcr.io/pandamy619/postgre-docker-template:latest
