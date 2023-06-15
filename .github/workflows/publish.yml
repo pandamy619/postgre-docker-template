@@ -13,6 +13,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build postgre-docker-template
         run: |
-          docker compose build . --tag ghcr.io/pandamy619/postgre-docker-template:latest
+          docker compose build . ghcr.io/pandamy619/postgre-docker-template:latest
           docker compose run ghcr.io/pandamy619/postgre-docker-template:latest
           docker compose push ghcr.io/pandamy619/postgre-docker-template:latest
